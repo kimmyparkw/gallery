@@ -56,3 +56,6 @@ class Gallery {
     return db.oneOrNone('DELETE FROM galleries WHERE id = $1', this.id)
   }
 }
+
+
+module.exports = Gallery
