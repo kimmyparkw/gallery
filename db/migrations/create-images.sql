@@ -2,5 +2,4 @@ CREATE TABLE IF NOT EXISTS images (
 id SERIAL PRIMARY KEY,
 title VARCHAR(255),
 url VARCHAR(512),
-artist VARCHAR(255),
-current_exhibit VARCHAR(255));
+artist VARCHAR(255));
