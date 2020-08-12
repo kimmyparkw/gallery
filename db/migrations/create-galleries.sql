@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS galleries (
+id SERIAL PRIMARY KEY,
+name VARCHAR(255),
+description VARCHAR(255)
+;
+
+ALTER TABLE galleries
+ADD COLUMN user_id INTEGER REFERENCES users(id);
