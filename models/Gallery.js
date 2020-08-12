@@ -2,9 +2,9 @@ const db = require('../db/config')
 
 class Gallery {
   constructor(gallery) {
-    this.id = gallery.id || NULL;
+    this.id = gallery.id;
     this.name = gallery.name;
-    this.descriptions = gallery.descriptions || NULL;
+    this.descriptions = gallery.descriptions;
     this.user_id = gallery.user_id || NULL;
   }
 

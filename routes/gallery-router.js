@@ -1,12 +1,12 @@
 const express = require('express')
 const galleryRouter = express.Router()
 
-const galleryController = require('../contorller/gallery-controller')
+const galleryController = require('../controller/gallery-controller')
 
 galleryRouter.get('/', galleryController.index)
 galleryRouter.post('/', galleryController.create)
 
-galleryController.get('/add', (req, res) => {
+galleryRouter.get('/add', (req, res) => {
   res.render('galleries/add')
 })
 

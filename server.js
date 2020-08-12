@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
   })
 })
 
-// app.use('/galleries', galleryRouter)
+app.use('/galleries', galleryRouter)
 // app.use('/auth', authRouter)
 // app.use('/user', userRouter)
 
