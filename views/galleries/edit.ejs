@@ -1,9 +1,9 @@
 <%- include('../partials/boilerplate') %>
 
-<p>galleries go here</p>
-
-
-
-
+<form action="/galleries/<%= gallery.id %>" method="POST">
+  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="description" placeholder="Description">
+  <input type="submit" value="Update gallery">
+</form>
 
 <%- include('../partials/end') %>
