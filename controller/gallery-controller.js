@@ -5,10 +5,7 @@ const galleryController = {
   index(req, res, next) {
     Gallery.getAll()
       .then((galleries) => {
-        res.render('galleries/index', {
-          message: 'ok',
-          data: {galleries}
-        })
+        res.render('galleries/index')
       })
       .catch(next)
   },

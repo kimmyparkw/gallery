@@ -1,0 +1,20 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  background-image: url('https://www.isic.nl/media/1395159/rijks.jpg?width=848&height=477&mode=crop&scale=both"');
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
