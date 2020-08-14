@@ -9,7 +9,7 @@ const passport = require('passport')
 //require router
 const galleryRouter = require('./routes/gallery-router')
 // const authRouter = require('./routes/auth-router')
-// const userRouter = require('./routes/user-router')
+const userRouter = require('./routes/user-router')
 
 const app = express()
 require('dotenv').config()
@@ -18,14 +18,14 @@ app.use(methodOverride('_method'))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
-// app.use(cookieParser())
-// app.use(session({
-//   secret: process.env.SECRET_KEY,
-//   resave: true,
-//   saveUninitialized: true,
-// }))
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(cookieParser())
+app.use(session({
+  secret: process.env.SECRET_KEY,
+  resave: false,
+  saveUninitialized: true,
+}))
+app.use(passport.initialize())
+app.use(passport.session())
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
