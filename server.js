@@ -12,7 +12,7 @@ const galleryRouter = require('./routes/gallery-router')
 // const userRouter = require('./routes/user-router')
 
 const app = express()
-// require('dotenv').config()
+require('dotenv').config()
 
 app.use(methodOverride('_method'))
 app.use(logger('dev'))
@@ -53,5 +53,8 @@ app.use('*', (req, res) => {
 });
 
 app.use((err, req, res, next) => {
-  res.status(500).send({err, message: err.message})
+  res.status(err.status || 500).json({
+    message: err.message,
+    stack: err.stack,
+  })
 })

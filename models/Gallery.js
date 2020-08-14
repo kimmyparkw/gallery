@@ -11,8 +11,8 @@ class Gallery {
   static getAll() {
     return db
     .manyOrNone('SELECT * FROM galleries ORDER BY id ASC')
-    .then((gallery) => {
-      return new this(gallery)
+    .then((galleries) => {
+      return galleries.map(gallery => new this(gallery))
     })
   }
 
