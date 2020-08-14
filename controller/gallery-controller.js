@@ -19,8 +19,7 @@ const galleryController = {
   show(req, res, next) {
     Gallery.getById(req.params.id)
     .then((gallery) => {
-      res.locals.gallery = gallery
-      next()
+      res.render('galleries/show', { gallery })
     })
     .catch(next)
   },

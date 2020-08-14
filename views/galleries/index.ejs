@@ -9,7 +9,7 @@
   <% galleries.forEach(gallery => {%>
   <div class="gallery">
     <div class="gallery-info">
-      <h3><%= gallery.name %></h3>
+      <h3><a href="galleries/<%= gallery.id %>"><%= gallery.name %></a></h3>
       <p><%= gallery.description %></p>
     </div>
   </div>
