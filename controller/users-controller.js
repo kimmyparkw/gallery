@@ -4,10 +4,17 @@ const User = require('../models/user')
 const usersController = {
 
   index(req, res, next) {
-      res.json({
-        message: 'ok',
-        user: req.user,
-    })
+    req.user
+    .findUserGalleries()
+      .then((galleries) => {
+        res.json({
+          message: 'ok',
+          data: {
+            user: req.user,
+            galleries,
+          }
+        })
+      })
     .catch(next)
   },
 
