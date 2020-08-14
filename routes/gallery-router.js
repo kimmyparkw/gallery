@@ -10,7 +10,11 @@ galleryRouter.get('/add', (req, res) => {
   res.render('galleries/add')
 })
 
-galleryRouter.get('/:id([0-9]+)', galleryController.show)
+galleryRouter.get('/:id([0-9]+)', galleryController.show, (req, res) => {
+  res.render('galleries/show', {
+    gallery: res.locals.gallery
+  })
+})
 
 galleryRouter.get('/:id([0-9]+)/edit', galleryController.show, (req, res) => {
   res.render('galleries/edit', {
