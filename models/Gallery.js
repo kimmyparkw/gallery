@@ -55,6 +55,11 @@ class Gallery {
   delete() {
     return db.oneOrNone('DELETE FROM galleries WHERE id = $1', this.id)
   }
+
+  findGalleryImages() {
+    return db
+    //.manyOrNone(JOIN STATEMENT QUERY GOES HERE. FIND THE IMAGES THAT CORRELATE TO THE GALLERY WITH THE GALLERY ID THAT IS REQUIRED)
+  }
 }
 
 

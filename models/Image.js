@@ -11,5 +11,9 @@ class Image {
   static getById(id) {
     return db
     .oneOrNone('SELECT * FROM images WHERE id = $1', id)
+    .then((image) => {
+      if (image) return new this(image)
+      throw new Error('Image not found')
+    })
   }
 }

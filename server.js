@@ -10,6 +10,7 @@ const passport = require('passport')
 const galleryRouter = require('./routes/gallery-router')
 const authRouter = require('./routes/auth-router')
 const userRouter = require('./routes/user-router')
+const imageRouter = require('./routes/image-router')
 
 const app = express()
 require('dotenv').config()
