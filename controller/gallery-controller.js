@@ -9,7 +9,9 @@ const galleryController = {
         //   message: 'ok',
         //   data: { galleries }
         // })
-        res.render('galleries/index')
+        res.render('galleries/index', {
+          galleries,
+        })
       })
       .catch(next)
   },

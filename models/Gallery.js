@@ -4,7 +4,7 @@ class Gallery {
   constructor(gallery) {
     this.id = gallery.id;
     this.name = gallery.name;
-    this.descriptions = gallery.descriptions;
+    this.description = gallery.description;
     this.user_id = gallery.user_id;
   }
 

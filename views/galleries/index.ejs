@@ -4,5 +4,16 @@
   <h1>Today's top picks</h1>
 </div>
 
+<div class="gallery-wrapper">
+  <a href="/galleries/add" class="buttonlike">Create a new gallery</a>
+  <% galleries.forEach(gallery => {%>
+  <div class="gallery">
+    <div class="gallery-info">
+      <h3><%= gallery.name %></h3>
+      <p><%= gallery.description %></p>
+    </div>
+  </div>
+  <% }) %>
+</div>
 
 <%- include('../partials/end') %>
