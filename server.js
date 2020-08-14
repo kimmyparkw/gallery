@@ -8,7 +8,7 @@ const passport = require('passport')
 
 //require router
 const galleryRouter = require('./routes/gallery-router')
-// const authRouter = require('./routes/auth-router')
+const authRouter = require('./routes/auth-router')
 const userRouter = require('./routes/user-router')
 
 const app = express()
@@ -43,8 +43,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/galleries', galleryRouter)
-// app.use('/auth', authRouter)
-// app.use('/user', userRouter)
+app.use('/auth', authRouter)
+app.use('/user', userRouter)
 
 app.use('*', (req, res) => {
   res.status(404).send({

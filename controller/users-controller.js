@@ -1,26 +1,19 @@
-const bcrypt = require(bryptjs)
-const User = requrie('../models/user')
+const bcrypt = require('bcryptjs')
+const User = require('../models/user')
 
 const usersController = {
 
-  index(req, res, next) => {
-    req.user
-    .findUserGalleries()
-    .then((galleries) => {
+  index(req, res, next) {
       res.json({
         message: 'ok',
-        data: {
-          user: req.user,
-          galleries,
-        }
-      })
+        user: req.user,
     })
     .catch(next)
   },
 
   create(req, res, next) {
     const salt = bcrypt.genSaltSync()
-    const hash = bcrypt.hashSync(req.body.password,salt)
+    const hash = bcrypt.hashSync(req.body.password, salt)
     new User({
       name: req.body.name,
       username: req.body.username,
