@@ -1,5 +1,15 @@
 <%- include('./partials/boilerplate') %>
 
+<div class="nav-container">
+  <div class="nav">
+    <p><a href="/galleries">Gallery</a></p>
+    <ul>
+      <li><a href="/images">Top Picks</a></li>
+      <li><a href="/galleries">Galleries</a></li>
+      <li><a href="/user/<%= user.id %>">Profile</a></li>
+    </ul>
+  </div>
+</div>
 <div class="main">
   <div class="home-text">
     <h1>Finding inspiration</h1>
