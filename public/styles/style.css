@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  justify-content: center;
+  background-color: #130101;
 }
 
 footer {
@@ -55,11 +55,15 @@ li {
   flex-direction: column;
   justify-content: center;
   height: 150px;
-  border: 1px solid black;
+  border: 1px solid #c76412;
   border-radius: 2px;
   text-align: center;
   padding: 10px;
 
+}
+
+.home-text, h2 {
+  color: #fdeedc;
 }
 
 
