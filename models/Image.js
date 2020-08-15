@@ -8,6 +8,14 @@ class Image {
     this.url = url
   }
 
+  static getAll() {
+    return db
+    .manyOrNone('SELECT * FROM images ORDER BY id ASC')
+    .then((images)=>{
+      return images.map(image => new this(image))
+    })
+  }
+
   static getById(id) {
     return db
     .oneOrNone('SELECT * FROM images WHERE id = $1', id)
@@ -17,3 +25,6 @@ class Image {
     })
   }
 }
+
+
+module.exports = Image
