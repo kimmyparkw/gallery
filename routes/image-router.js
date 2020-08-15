@@ -1,6 +1,6 @@
 const imageRouter = require('express').Router()
 
-const imagesController = require('../controller/images-controller')
+const imageController = require('../controller/images-controller')
 
 imageRouter.get('/', imagesController.index)
 

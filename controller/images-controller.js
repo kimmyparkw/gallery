@@ -30,4 +30,4 @@ const imageController = {
   // }
 }
 
-module.exports = imagesController
+module.exports = imageController
