@@ -62,7 +62,11 @@ li {
 
 }
 
-.home-text, h2 {
+.home-text {
+  color: #fdeedc;
+}
+
+.log-in a, p {
   color: #fdeedc;
 }
 
