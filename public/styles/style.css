@@ -108,7 +108,7 @@ h1 {
   align-items: center;
 }
 
-.gallery-info h3, p {
+.gallery-info a, p {
     color: #fdeedc;
 }
 
