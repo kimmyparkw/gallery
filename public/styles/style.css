@@ -160,3 +160,7 @@ h3 {
 p {
   color: #fdeedc;
 }
+
+.addFormContainer {
+  border: 1px solid #c76412;
+}
