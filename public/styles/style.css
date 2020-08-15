@@ -82,10 +82,12 @@ li {
   background-size: cover;
   justify-content: center;
   text-align: center;
+  opacity: 60;
 }
 
 h1 {
   font-size: 5em;
+  color: #fdeedc;
 }
 
 .gallery {
