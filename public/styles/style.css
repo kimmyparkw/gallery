@@ -132,7 +132,7 @@ form input {
 
 .top-images-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   }
 
 .image-tile {
