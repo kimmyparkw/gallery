@@ -28,6 +28,11 @@ ul {
 li {
   color: #fdeedc;
   font-family: sans-serif;
+  padding: auto 10px;
+}
+
+span {
+  margin-left: 20px;
 }
 
 /* home page */
