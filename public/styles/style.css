@@ -40,13 +40,17 @@ li {
 }
 
 /* home page */
-.main, .log-in {
+.main{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
+
 .log-in {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  border: 1px solid black
 }
 
 
