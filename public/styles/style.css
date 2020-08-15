@@ -134,3 +134,12 @@ form input {
   display: flex;
   justify-content: center;
   }
+
+.image-tile {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px;
+}
