@@ -21,7 +21,6 @@ footer {
 
 ul {
   display: flex;
-  justify-content: space-around;
   list-style: none;
 }
 
@@ -31,7 +30,7 @@ li {
   padding: auto 10px;
 }
 
-span {
+p {
   margin-left: 20px;
 }
 
