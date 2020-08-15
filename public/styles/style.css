@@ -143,3 +143,8 @@ form input {
   align-items: center;
   margin: 20px 20px;
 }
+
+img {
+  height: 100px;
+  width: 100px;
+}
