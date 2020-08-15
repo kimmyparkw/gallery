@@ -98,6 +98,7 @@ h1 {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   margin: 20px 0;
