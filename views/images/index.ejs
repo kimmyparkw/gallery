@@ -4,4 +4,14 @@
   <h1>Today's top picks</h1>
 </div>
 
+<div class="top-images-container">
+  <% images.forEach(image => {%>
+  <div class="gallery">
+    <div class="gallery-info">
+      <h3><a href="images/<%= image.id %>"><%= image.title %></a></h3>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
 <%- include('../partials/end') %>

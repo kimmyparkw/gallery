@@ -21,13 +21,13 @@ const imageController = {
     .catch(next)
   },
 
-  // randomImageGrid(req, res, next) {
-  //   Image.getAll()
-  //   .then((images) => {
-  //     //map?
-  //     //get a random array of images. the ejs file with grid them out.
-  //   })
-  // }
+  randomImageGrid(req, res, next) {
+    Image.getAll()
+    .then((images) => {
+      //map?
+      //get a random array of images. the ejs file with grid them out.
+    })
+  }
 }
 
 module.exports = imageController
