@@ -9,9 +9,18 @@ footer {
   align-items: center;
 }
 
+.nav-container {
+  background-color: #3c6f7e;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* home page */
