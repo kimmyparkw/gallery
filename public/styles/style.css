@@ -37,6 +37,7 @@ li {
 .logo {
   margin-left: 20px;
   font-size: 2em;
+  color: #fdeedc;
 }
 
 /* home page */
@@ -44,6 +45,7 @@ li {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  align-items: center;
 }
 
 
@@ -51,7 +53,6 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: 150px;
   border: 1px solid black;
   border-radius: 2px;
