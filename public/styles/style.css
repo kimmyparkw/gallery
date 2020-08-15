@@ -99,7 +99,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 20px;
 }
 
 .gallery-info {
@@ -133,5 +133,4 @@ form input {
 .top-images-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   }
