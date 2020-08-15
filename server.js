@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 app.use('/galleries', galleryRouter)
 app.use('/auth', authRouter)
 app.use('/user', userRouter)
-// app.use('/images', imageRouter)
+app.use('/images', imageRouter)
 
 app.use('*', (req, res) => {
   res.status(404).send({
