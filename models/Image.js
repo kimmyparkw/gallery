@@ -9,6 +9,7 @@ class Image {
   }
 
   static getAll() {
+    console.log(db);
     return db
     .manyOrNone('SELECT * FROM images ORDER BY id ASC')
     .then((images)=>{
