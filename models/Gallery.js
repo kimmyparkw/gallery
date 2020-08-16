@@ -10,7 +10,7 @@ class Gallery {
 
   static getAll() {
     return db
-    .manyOrNone('SELECT * FROM galleries ORDER BY id ASC)
+    .manyOrNone('SELECT * FROM galleries ORDER BY id ASC')
     .then((galleries) => {
       return galleries.map(gallery => new this(gallery))
     })
