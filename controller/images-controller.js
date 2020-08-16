@@ -5,8 +5,16 @@ const imageController = {
   index(req, res, next) {
     Image.getAll()
     .then((images) => {
+      randomImages = []
+      if (randomImages.length <= 10) {
+        for (let i = 0; i <= 10; i ++){
+          randomImage = images[Math.floor(Math.random() * 40)]
+          randomImages.push(randomImage)
+        }
+      }
+
       res.render('images/index', {
-        images,
+        randomImages,
       })
     })
     .catch(next)
@@ -21,13 +29,6 @@ const imageController = {
     .catch(next)
   },
 
-  randomImageGrid(req, res, next) {
-    Image.getAll()
-    .then((images) => {
-      //map?
-      //get a random array of images. the ejs file with grid them out.
-    })
-  }
 }
 
 module.exports = imageController
