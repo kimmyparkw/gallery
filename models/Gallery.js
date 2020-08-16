@@ -10,7 +10,7 @@ class Gallery {
 
   static getAll() {
     return db
-    .manyOrNone('SELECT * FROM galleries WHERE id = $1', user_id)
+    .manyOrNone('SELECT * FROM galleries WHERE user_id = $1', user_id)
     .then((galleries) => {
       return galleries.map(gallery => new this(gallery))
     })
