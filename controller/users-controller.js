@@ -7,6 +7,7 @@ const usersController = {
     req.user
     .findUserGalleries()
       .then((galleries) => {
+        console.log(galleries);
         res.render('galleries/index')
       })
     .catch(next)
