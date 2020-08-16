@@ -8,9 +8,9 @@ class Gallery {
     this.user_id = gallery.user_id;
   }
 
-  static getAll(user_id) {
+  static getAll() {
     return db
-    .manyOrNone('SELECT * FROM galleries WHERE user_id = $1', user_id)
+    .manyOrNone('SELECT * FROM galleries ORDER BY id ASC)
     .then((galleries) => {
       return galleries.map(gallery => new this(gallery))
     })
