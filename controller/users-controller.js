@@ -7,13 +7,7 @@ const usersController = {
     req.user
     .findUserGalleries()
       .then((galleries) => {
-        res.json({
-          message: 'ok',
-          data: {
-            user: req.user,
-            galleries,
-          }
-        })
+        res.render('galleries/index')
       })
     .catch(next)
   },
