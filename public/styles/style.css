@@ -10,6 +10,7 @@ footer {
   bottom: 0;
   align-items: center;
   color: #fdeedc;
+  text-align: center;
 }
 
 /* navbar */
@@ -108,8 +109,19 @@ h1 {
   align-items: center;
 }
 
-.gallery-info a, p {
+.gallery-info a, p .buttonlike{
     color: #fdeedc;
+}
+
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonlike {
+margin: 20px;
 }
 
 /* auth stuff */
