@@ -12,6 +12,7 @@ const imageController = {
             randomImages.push(randomImage)
           }
         }
+        console.log(randomImages);
         res.render('images/index', {
           randomImages,
         })
