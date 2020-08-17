@@ -1,6 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   background-color: #130101;
 }
@@ -13,9 +15,17 @@ footer {
   text-align: center;
 }
 
+.nav-and-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* navbar */
 .nav-container {
   background-color: #3c6f7e;
+  width: 100%;
 }
 
 .nav {
@@ -49,6 +59,7 @@ li {
   justify-content: space-around;
   margin-top: 20px;
   align-items: center;
+  width: 100%;
 }
 
 
