@@ -4,9 +4,9 @@ const galleryRouter = express.Router()
 const galleryController = require('../controller/gallery-controller')
 
 galleryRouter.get('/', galleryController.index)
-galleryRouter.post('/', galleryController.create)
-
-galleryRouter.get('/add', (req, res) => {
+galleryRouter.post('/', authHelpers.loginRequired, galleryController.create)
+//added loginRequired in line 7 , 9, 19, 25, and 27
+galleryRouter.get('/add', authHelpers.loginRequired, (req, res) => {
   res.render('galleries/add')
 })
 
@@ -16,14 +16,14 @@ galleryRouter.get('/:id([0-9]+)', galleryController.show, (req, res) => {
   })
 })
 
-galleryRouter.get('/:id([0-9]+)/edit', galleryController.show, (req, res) => {
+galleryRouter.get('/:id([0-9]+)/edit', authHelpers.loginRequired, galleryController.show, (req, res) => {
   res.render('galleries/edit', {
     gallery: res.locals.gallery,
   })
 })
 
-galleryRouter.put('/:id', galleryController.update)
+galleryRouter.put('/:id', authHelpers.loginRequired, galleryController.update)
 
-galleryRouter.delete('/:id', galleryController.delete)
+galleryRouter.delete('/:id', authHelpers.loginRequired, galleryController.delete)
 
 module.exports = galleryRouter
