@@ -1,23 +1,26 @@
 <%- include('../partials/boilerplate') %>
 
-<div class="hero">
-  <h1>My galleries</h1>
+<div class="main">
+  <div class="hero">
+    <h1>My galleries</h1>
+  </div>
+
+  <div class="gallery-wrapper">
+    <a href="galleries/add" class="buttonlike">Create a new gallery</a>
+    <% galleries.forEach(gallery => {%>
+    <div class="gallery">
+      <div class="gallery-info">
+        <h3><a href="galleries/<%= gallery.id %>"><%= gallery.name %></a></h3>
+        <p><%= gallery.description %></p>
+      </div>
+      <a href="/galleries/<%= gallery.id %>/edit">Edit gallery</a>
+      <form method="POST" action="/galleries/<%= gallery.id %>?_method=DELETE">
+        <input type="submit" name="" value="Delete Gallery">
+      </form>
+    </div>
+    <% }) %>
+  </div>
 </div>
 
-<div class="gallery-wrapper">
-  <a href="galleries/add" class="buttonlike">Create a new gallery</a>
-  <% galleries.forEach(gallery => {%>
-  <div class="gallery">
-    <div class="gallery-info">
-      <h3><a href="galleries/<%= gallery.id %>"><%= gallery.name %></a></h3>
-      <p><%= gallery.description %></p>
-    </div>
-    <a href="/galleries/<%= gallery.id %>/edit">Edit gallery</a>
-    <form method="POST" action="/galleries/<%= gallery.id %>?_method=DELETE">
-      <input type="submit" name="" value="Delete Gallery">
-    </form>
-  </div>
-  <% }) %>
-</div>
 
 <%- include('../partials/end') %>
