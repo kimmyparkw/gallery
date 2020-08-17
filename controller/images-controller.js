@@ -5,7 +5,7 @@ const imageController = {
   index(req, res, next) {
     Image.getAll()
       .then((images) => {
-        randomImages = []
+        const randomImages = []
         if (randomImages.length < 10) {
           for (let i = 0; i <= 10; i++) {
             randomImage = images[Math.floor(Math.random() * 40)]
