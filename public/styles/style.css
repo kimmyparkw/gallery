@@ -93,8 +93,8 @@ h1 {
 
 .gallery {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg/1024px-Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg');
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
