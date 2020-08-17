@@ -8,7 +8,7 @@ class Gallery {
     this.user_id = gallery.user_id;
   }
 
-  static getAll() {
+  static getAll(user_id) {
     return db
     .manyOrNone('SELECT * FROM galleries WHERE user_id = $1', user_id)
     .then((galleries) => {
