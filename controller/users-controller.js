@@ -6,8 +6,8 @@ const usersController = {
   index(req, res, next) {
     new User(req.user)
       .findUserGalleries()
-      .then((user) => {
-        res.render('galleries/index')
+      .then((galleries) => {
+        res.render('galleries/index', galleries)
       })
     .catch(next)
   },
