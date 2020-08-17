@@ -42,10 +42,7 @@ class User {
 
   findUserGalleries() {
     return db
-    .manyOrNone('SELECT * FROM galleries WHERE user_id = $1', this.id)
-    .then((galleries) => {
-      return galleries.map((gallery) => new Gallery(gallery))
-    })
+    .manyOrNone(`SELECT * FROM galleries WHERE user_id = $/id/`, this)
   }
 }
 

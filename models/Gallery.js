@@ -10,7 +10,7 @@ class Gallery {
 
   static getAll() {
     return db
-    .manyOrNone('SELECT * FROM galleries ORDER BY id ASC')
+    .manyOrNone('SELECT * FROM galleries WHERE user_id = $1', user_id)
     .then((galleries) => {
       return galleries.map(gallery => new this(gallery))
     })
@@ -58,6 +58,7 @@ class Gallery {
 
   findGalleryImages() {
     return db
+    .manyOrNone('SELECT ')
     //.manyOrNone(JOIN STATEMENT QUERY GOES HERE. FIND THE IMAGES THAT CORRELATE TO THE GALLERY WITH THE GALLERY ID THAT IS REQUIRED)
   }
 }
