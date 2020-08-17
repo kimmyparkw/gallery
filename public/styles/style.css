@@ -169,13 +169,11 @@ img {
   width: auto;
 }
 
-h3 {
+h3 p {
   margin: 10px;
-}
-
-p {
   color: #fdeedc;
 }
+
 
 .addFormContainer {
   border: 1px solid #c76412;
