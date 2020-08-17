@@ -4,29 +4,28 @@ const imageController = {
 
   index(req, res, next) {
     Image.getAll()
-    .then((images) => {
-      randomImages = []
-      if (randomImages.length < 10) {
-        for (let i = 0; i <= 10; i ++){
-          randomImage = images[Math.floor(Math.random() * 40)]
-          randomImages.push(randomImage)
+      .then((images) => {
+        randomImages = []
+        if (randomImages.length < 10) {
+          for (let i = 0; i <= 10; i++) {
+            randomImage = images[Math.floor(Math.random() * 40)]
+            randomImages.push(randomImage)
+          }
         }
-      }
-
-      res.render('images/index', {
-        randomImages,
+        res.render('images/index', {
+          randomImages,
+        })
       })
-    })
-    .catch(next)
+      .catch(next)
   },
 
   show(req, res, next) {
     Image.getById(req.params.id)
-    .then((image) => {
-      res.locals.image = image
-      next()
-    })
-    .catch(next)
+      .then((image) => {
+        res.locals.image = image
+        next()
+      })
+      .catch(next)
   },
 
 }
