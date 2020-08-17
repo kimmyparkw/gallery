@@ -169,7 +169,7 @@ img {
   width: auto;
 }
 
-h3 p {
+h3, p {
   margin: 10px;
   color: #fdeedc;
 }
