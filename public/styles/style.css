@@ -44,6 +44,7 @@ ul {
 }
 
 li {
+  font-family: 'Rubik', sans-serif;
   margin: auto 10px;
 }
 
@@ -98,6 +99,7 @@ li {
 }
 
 h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 5em;
   color: #fdeedc;
 }
@@ -181,6 +183,7 @@ img {
 }
 
 h3, p {
+  font-family: 'Playfair Display', serif;
   margin: 10px;
   color: #fdeedc;
 }
