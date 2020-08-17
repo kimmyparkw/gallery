@@ -1,5 +1,6 @@
 const express = require('express')
 const galleryRouter = express.Router()
+const authHelpers = require('../services/auth/auth-helpers')
 
 const galleryController = require('../controller/gallery-controller')
 
