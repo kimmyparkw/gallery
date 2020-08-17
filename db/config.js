@@ -1,4 +1,5 @@
 require('dotenv').config()
+const DB_NAME = process.env.DB_NAME || 'gallery_dev'
 
 const options = {
   query: (e) => {
@@ -11,11 +12,11 @@ const pgp = require('pg-promise')(options)
 function setDatabase() {
   if(process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
     return pgp({
-      database: 'gallery_dev',
+      database: DB_NAME,
       port: 5432,
       host: 'localhost'
     })
-  } else if (process.env.NODE_ENV === 'production'){
+  } else if (process.env.NODE_ENV === 'production') {
     return pgp(process.env.DATABASE_URL)
   }
 }
