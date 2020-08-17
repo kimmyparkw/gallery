@@ -4,13 +4,11 @@ body {
   justify-content: center;
   margin: 0;
   background-color: #130101;
-  position: relative;
 }
 
 .page-container {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 footer {
@@ -28,6 +26,10 @@ footer {
   justify-content: center;
   align-items: center;
   padding-bottom: 60px;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh
+
 }
 
 /* navbar */
