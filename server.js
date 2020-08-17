@@ -10,7 +10,7 @@ const passport = require('passport')
 const galleryRouter = require('./routes/gallery-router')
 const authRouter = require('./routes/auth-router')
 const userRouter = require('./routes/user-router')
-const imageRouter = require('./routes/image-router')
+// const imageRouter = require('./routes/image-router')
 
 
 const app = express()
@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
 app.use('/galleries', galleryRouter)
 app.use('/auth', authRouter)
 app.use('/user', userRouter)
-app.use('/images', imageRouter)
+// app.use('/images', imageRouter)
 
 app.use('*', (req, res) => {
   res.status(404).send({
