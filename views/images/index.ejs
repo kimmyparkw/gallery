@@ -12,17 +12,7 @@
       <h3><a href="images/<%= image.id %>"><%= image.title %></a></h3>
     </div>
     <p class="add-image">Add to my gallery</p>
-    <div class="add-image-options">
-      <select class="which-gallery">
-        <% if (galleries) { %>
-            <% for (let gallery of galleries) { %>
-              <option value="<%= gallery.name %>"><%= gallery.name %></option>
-            <% } %>
-        <% } else { %>
-            <option value="create">Create a new gallery</option>
-        <% } %>
-      </select>
-    </div>
+
   </div>
   <% }) %>
 </div>
