@@ -7,12 +7,12 @@ const imageController = {
       .then((images) => {
         const randomImages = []
         if (randomImages.length < 10) {
-          for (let i = 0; i <= 10; i++) {
+          for (let i = 0; i < 10; i++) {
             randomImage = images[Math.floor(Math.random() * 40)]
             randomImages.push(randomImage)
           }
         }
-        console.log(randomImages);
+        console.log('random image array', randomImages);
         res.render('images/index', {
           randomImages,
         })
