@@ -25,7 +25,7 @@ const galleryController = {
     new Gallery({
       name: req.body.name,
       description: req.body.description,
-      user_id: req.user.id,
+      user_id: req.user_id,
     })
     .save()
     .then(() => {
