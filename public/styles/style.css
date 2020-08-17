@@ -59,7 +59,7 @@ li {
 }
 
 /* home page */
-.main{
+.main-home{
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
@@ -94,6 +94,7 @@ li {
   display: flex;
   flex-direction: column;
   height: 20vh;
+  width: 100vw;
   background-image: url('https://www.isic.nl/media/1395159/rijks.jpg?width=848&height=477&mode=crop&scale=both"');
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,6 +137,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 
 .buttonlike {
