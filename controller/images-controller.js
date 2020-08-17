@@ -5,6 +5,7 @@ const imageController = {
   index(req, res, next) {
     Image.getAll()
       .then((images) => {
+        console.log('images', images);
         const randomImages = []
         if (randomImages.length < 10) {
           for (let i = 0; i < 10; i++) {
@@ -12,7 +13,6 @@ const imageController = {
             randomImages.push(randomImage)
           }
         }
-        console.log('random image array', randomImages);
         res.render('images/index', {
           randomImages,
         })
