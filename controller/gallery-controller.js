@@ -51,7 +51,7 @@ const galleryController = {
       return gallery.delete()
     })
     .then(() => {
-      res.redirect('/galleries')
+      res.redirect('/user')
     })
     .catch(next)
   }
