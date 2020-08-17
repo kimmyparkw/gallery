@@ -1,18 +1,20 @@
 <%- include('../partials/boilerplate') %>
-
-<h1>My profile</h1>
-<h3>My galleries</h3>
-<% galleries.forEach(gallery => {%>
-<div class="gallery">
-  <div class="gallery-info">
-    <h3><a href="galleries/<%= gallery.id %>"><%= gallery.name %></a></h3>
-    <p><%= gallery.description %></p>
+<div class="main">
+  <h1>My profile</h1>
+  <h3>My galleries</h3>
+  <% galleries.forEach(gallery => {%>
+  <div class="gallery">
+    <div class="gallery-info">
+      <h3><a href="galleries/<%= gallery.id %>"><%= gallery.name %></a></h3>
+      <p><%= gallery.description %></p>
+    </div>
+    <a href="/galleries/<%= gallery.id %>/edit">Edit gallery</a>
+    <form method="POST" action="/galleries/<%= gallery.id %>?_method=DELETE">
+      <input type="submit" name="" value="Delete Gallery">
+    </form>
   </div>
-  <a href="/galleries/<%= gallery.id %>/edit">Edit gallery</a>
-  <form method="POST" action="/galleries/<%= gallery.id %>?_method=DELETE">
-    <input type="submit" name="" value="Delete Gallery">
-  </form>
+  <% }) %>
 </div>
-<% }) %>
+
 
 <%- include('../partials/end') %>

@@ -5,7 +5,7 @@ class Gallery {
     this.id = gallery.id;
     this.name = gallery.name;
     this.description = gallery.description;
-    this.user_id = gallery.user_id;
+    this.user_id = gallery.user_id || null;
   }
 
   static getAll() {
