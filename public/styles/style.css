@@ -166,6 +166,7 @@ form input {
 
 img {
   height: 150px;
+  width: auto;
 }
 
 h3 {
