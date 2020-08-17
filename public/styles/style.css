@@ -9,6 +9,7 @@ body {
 .page-container {
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 footer {
@@ -16,6 +17,8 @@ footer {
   color: #fdeedc;
   text-align: center;
   height: 60px;
+  position:absolute;
+  bottom: 0;
 }
 
 .main {
