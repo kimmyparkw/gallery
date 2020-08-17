@@ -6,7 +6,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/images">Top Picks</a></li>
         <li><a href="/galleries">Galleries</a></li>
-        <% if (req.user) { %>
+        <% if (auth) { %>
           <li><a href="/auth/logout">Logout</a></li>
         <% } else { %>
         <li><a href="/auth/login">Login</a></li>
