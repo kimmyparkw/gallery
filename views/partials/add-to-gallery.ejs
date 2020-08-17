@@ -1,0 +1,11 @@
+<div class="add-image-options">
+  <select class="which-gallery">
+    <% if (galleries) { %>
+        <% for (let gallery of galleries) { %>
+          <option value="<%= gallery.name %>"><%= gallery.name %></option>
+        <% } %>
+    <% } else { %>
+        <option value="create">Create a new gallery</option>
+    <% } %>
+  </select>
+</div>

@@ -2,17 +2,22 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin: 0;
   background-color: #130101;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
 }
 
 footer {
   position: absolute;
   bottom: 0;
-  align-items: center;
+  width: 100%;
   color: #fdeedc;
   text-align: center;
+  height: 60px;
 }
 
 .nav-and-main {
@@ -20,6 +25,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 60px;
 }
 
 /* navbar */
