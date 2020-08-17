@@ -13,6 +13,9 @@
       <p><%= gallery.description %></p>
     </div>
     <a href="/galleries/<%= gallery.id %>/edit">Edit gallery</a>
+    <form method="POST" action="/galleries/<%= gallery.id %>?_method=DELETE">
+      <input type="submit" name="" value="Delete Gallery">
+    </form>
   </div>
   <% }) %>
 </div>
