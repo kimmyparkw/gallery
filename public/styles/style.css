@@ -4,6 +4,7 @@ body {
   justify-content: center;
   margin: 0;
   background-color: #130101;
+  position: relative;
 }
 
 .page-container {
