@@ -4,7 +4,7 @@ const User = require('../models/User')
 const usersController = {
 
   index(req, res, next) {
-    req.user
+    new User(req.user)
       .then((user) => {
         res.render('users/index')
       })
