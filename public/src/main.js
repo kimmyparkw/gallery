@@ -1,5 +1,5 @@
 const addImageEls = document.querySelectorAll('.add-image')
-const body = document.querySelector('body')
+const main = document.querySelector('.main')
 addImageEls.forEach((image) => {
   image.addEventListener('click', () => {
     const addFormContainer = document.createElement('div')
@@ -7,8 +7,9 @@ addImageEls.forEach((image) => {
     const addForm = document.createElement('form')
     const addFormText = document.createElement('p')
     addFormText.innerText = 'Which gallery would you like to add to?'
-    body.append(addFormContainer)
+    main.append(addFormContainer)
     addForm.append(addFormText)
-
+    const dropMenu = document.querySelector('.add-image-options')
+    addForm.append(dropMenu)
   })
 })
