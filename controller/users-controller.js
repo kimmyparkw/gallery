@@ -4,9 +4,12 @@ const User = require('../models/User')
 const usersController = {
 
   index(req, res, next) {
-    User.findByUsername()
-    .then((user) => {
-      res.render('galleries/index')
+    req.user
+    .findUserGalleries()
+    .then((gallerires) => {
+      res.render('gallerires/index', {
+        galleriers,
+      })
     })
     .catch(next)
   },

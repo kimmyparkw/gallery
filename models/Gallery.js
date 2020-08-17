@@ -8,7 +8,7 @@ class Gallery {
     this.user_id = gallery.user_id;
   }
 
-  static getAll(user_id) {
+  static getAll() {
     return db
     .manyOrNone('SELECT * FROM galleries ORDER BY id ASC')
     .then((galleries) => {
