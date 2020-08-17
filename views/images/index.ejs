@@ -5,7 +5,8 @@
 </div>
 
 <div class="top-images-container">
-  <% randomImages.forEach(image => {%>
+  <% randomImages.forEach((image) => {%>
+    <% console.log('image') %>
   <div class="image-tile">
     <img src="<%= image.url %>" alt="">
     <div class="gallery-info">
