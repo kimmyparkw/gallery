@@ -8,8 +8,8 @@ addImageEls.forEach((image) => {
     const addFormText = document.createElement('p')
     addFormText.innerText = 'Which gallery would you like to add to?'
     main.append(addFormContainer)
-    addForm.append(addFormText)
+    addFormContainer.append(addFormText)
     const dropMenu = document.querySelector('.add-image-options')
-    addForm.append(dropMenu)
+    addFormContainer.append(dropMenu)
   })
 })
