@@ -7,10 +7,8 @@ addImageEls.forEach((image) => {
     const addForm = document.createElement('form')
     const addFormText = document.createElement('p')
     addFormText.innerText = 'Which gallery would you like to add to?'
-    if (!body.append(addFormContainer)) {
-      body.append(addFormContainer)
-      addForm.append(addFormText)
-    }
+    body.append(addFormContainer)
+    addForm.append(addFormText)
 
   })
 })
