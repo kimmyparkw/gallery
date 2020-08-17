@@ -1,21 +1,23 @@
 <%- include('../partials/boilerplate') %>
-
-<div class="hero">
-  <h1>Today's top picks</h1>
-</div>
-
-<div class="top-images-container">
-  <% randomImages.forEach((image) => {%>
-  <div class="image-tile">
-    <img src="<%= image.url %>" alt="">
-    <div class="gallery-info">
-      <h3><a href="images/<%= image.id %>"><%= image.title %></a></h3>
-    </div>
-    <p class="add-image">Add to my gallery</p>
-
+<div class="main">
+  <div class="hero">
+    <h1>Today's top picks</h1>
   </div>
-  <% }) %>
+
+  <div class="top-images-container">
+    <% randomImages.forEach((image) => {%>
+    <div class="image-tile">
+      <img src="<%= image.url %>" alt="">
+      <div class="gallery-info">
+        <h3><a href="images/<%= image.id %>"><%= image.title %></a></h3>
+      </div>
+      <p class="add-image">Add to my gallery</p>
+
+    </div>
+    <% }) %>
+  </div>
 </div>
+
 
 
 <script src="/src/main.js" charset="utf-8"></script>
