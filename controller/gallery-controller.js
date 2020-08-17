@@ -29,7 +29,7 @@ const galleryController = {
     })
     .save()
     .then(() => {
-      res.redirect('/galleries')
+      res.redirect('/user')
     })
     .catch(next)
   },
