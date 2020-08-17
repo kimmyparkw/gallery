@@ -20,13 +20,13 @@ footer {
   height: 60px;
 }
 
-/* .nav-and-main {
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 60px;
-} */
+}
 
 /* navbar */
 .nav-container {
